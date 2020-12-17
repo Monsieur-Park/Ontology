@@ -44,7 +44,7 @@
 
 - Object property
 
-| OBJECT PROPERTY   | LABEL       |DOMAIN | |RANGE  | 
+| OBJECT PROPERTY   | LABEL       |DOMAIN  |RANGE  | 
 | ------------------| ----------- |----------- |-------------|
 | foaf:member 	    | member      |dioc:Diocesis| dioc:Ecclesiastical_Region|
 | dcterms:type 	 	  | type        |dioc:Suffragan| dioc:Diocesis|
@@ -53,9 +53,8 @@
 
 
 - Data property
+
 | DATA PROPERTY     | LABEL       |DOMAIN | RANGE  | 
-| ------------------| ----------- |----------- |-------------|
+| ------------------| ----------- |----------- |---|
 | dioc:name       | name     |dioc:change| xsd:string|
 | dioc:date       | date     |dioc:change| xsd:integer|
-
-
