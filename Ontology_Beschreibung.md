@@ -31,15 +31,15 @@
 
 
 
- | CLASS             | LABEL       |description | super class  | sub class|
+| CLASS             | LABEL       |description | super class  | sub class|
  | ------------------| ----------- |----------- |-------------|--------- |
  | dioc:Change       | Change     |The Change concept is the super class of all types of change| FeatureChange|
  | dioc:FeatureChange       | FeatureChange     |The Change concept is the super class of all types of change| IdentificationChange|Change|
  | dioc:IdentificationChange        | IdentificationChange      |The IdentificationChange concept describes change(s) that modify the identifier, name, acronym and/or description attributs|Renomination|FeatureChange| 
  | dioc:Renomination       | Renomination     |diocese or metropolis changing name| |IdentificationChange|
  | dioc:arise       | Renomination     |dioceses resulting from the union of other dioceses | |IdentificationChange|
- | dioc:decay       | decay     |dioceses resulting from the union of other dioceses | |IdentificationChange|
- | dioc:arise       | Renomination     |dioceses resulting from the union of other dioceses | |IdentificationChange|
+ | dioc:decay       | decay     |diocese or metropolis that continues to exist but is not active or is in an occupied territory | |IdentificationChange|
+
 
 
 - Object property
