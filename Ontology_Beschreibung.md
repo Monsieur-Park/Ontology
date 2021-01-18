@@ -60,7 +60,7 @@ The ontology  aims at describing changes that occured from administrative territ
  | dioc:Change       | Change     |The Change concept is the super class of all types of change.| FeatureChange|
  | dioc:FeatureChange       | FeatureChange     |The FeatureChange concept describes one or a set of changes that occur simultaneously and affect resource. | HierarchyChange|Change|
  | dioc:HierarchyChange        | HierarchyChange      |The HierarchyChange concept describes modification of the position of administrative entity.| UnitHierarchyChange |FeatureChange|
- | dioc:TerritoryChange        | TerritoryChange      |The TerritoryChange concept describes modification of the Territory of Feature. | Expansion, Reshaping, Contraction, Reduction |FeatureChange|
+ | dioc:TerritoryChange        | TerritoryChange      |The TerritoryChange concept describes modification of the Territory of Feature. | Expansion, Reshaping, Reduction, Fusion |FeatureChange|
  | dioc:StatusChange        | StatusChange      |The StatusChange concept describes change(s) that modify the territorial status.|Appearance, Inactiv, Reactive|FeatureChange|
  | dioc:UnitHierarchyChange        | UnitHierarchyChange      |The UnitHierarchyChange concept describes changes that affect Features that are of type administrative entity . It describes changes of the Unit position within the hierarchy. | |HierarchyChange|
  | dioc:Appearance        | Appearance      |The Appearance concept describes the **appearance** (or creation) of a new Feature. | |StatusChange|
