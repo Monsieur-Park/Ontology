@@ -83,15 +83,15 @@ The ontology  aims at describing changes that occured from administrative territ
 | governedBy  	 	  | governedBy         |dioc:Diocese| dioc:Ecclesiastical_Province|
 | was_affected_by	 	  | was_affected_by        |dioc:ReligiousAdministrativeEntity| dioc:UnitHierarchyChange |
 | renomination 	 	  | renomination        |dioc:ReligiousAdministrativeEntity| dioc:Name|
-| owl:was_erected_by 	| was_erected_by     |dioc:ReligiousAdministrativeEntity| dioc:Appearance |
-| owl:was_decay_by 	| was_decay_by     |dioc:ReligiousAdministrativeEntity| dioc:Inactive|
-| owl:was_reinstated_by 	| was_reinstated_by     |dioc:ReligiousAdministrativeEntity| dioc:Reactive|
-| owl:was_incorporated 	| was_incorporated     |dioc:ReligiousAdministrativeEntity| dioc:Expansion|
-| owl:was_modificated 	| was_modificated     |dioc:ReligiousAdministrativeEntity| dioc:Reshaping|
-| owl:was_united 	| was_united     |dioc:ReligiousAdministrativeEntity| dioc:Fusion|
-| owl:was_lost 	| was_lost     |dioc:ReligiousAdministrativeEntity| dioc:Reduction|
-| owl:has prefered identifier 	| has prefered identifier     |dioc:Place|dioc:Identifier|
-| owl:hasCoordinate 	| hasCoordinate     |dioc:Place|dioc:GeoCoordinates|
+| dioc:was_erected_by 	| was_erected_by     |dioc:ReligiousAdministrativeEntity| dioc:Appearance |
+| dioc:was_decay_by 	| was_decay_by     |dioc:ReligiousAdministrativeEntity| dioc:Inactive|
+| dioc:was_reinstated_by 	| was_reinstated_by     |dioc:ReligiousAdministrativeEntity| dioc:Reactive|
+| dioc:was_incorporated 	| was_incorporated     |dioc:ReligiousAdministrativeEntity| dioc:Expansion|
+| dioc:was_modificated 	| was_modificated     |dioc:ReligiousAdministrativeEntity| dioc:Reshaping|
+| dioc:was_united 	| was_united     |dioc:ReligiousAdministrativeEntity| dioc:Fusion|
+| dioc:was_lost 	| was_lost     |dioc:ReligiousAdministrativeEntity| dioc:Reduction|
+| dioc:has prefered identifier 	| has prefered identifier     |dioc:Place|dioc:Identifier|
+| dioc:hasCoordinate 	| hasCoordinate     |dioc:Place|dioc:GeoCoordinates|
 
 
 - Data property
