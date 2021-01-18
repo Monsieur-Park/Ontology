@@ -1,8 +1,6 @@
 ## Ontology description
 
-The ontology  aims at describing changes that occured from administrative territories of catholic dioceses and their changes overtime
-
-changes that occured from one version of a Territorial Statistical Nomenclature (TSN) (i.e., partition of the territory) and its subsequent (e.g., change in territorial units boundaries to reflect an administrative reorganisation).
+The ontology  aims at describing changes that occured from administrative territories of catholic dioceses and their changes overtime (i.e., partition of the territory) and its subsequent (change in territorial units boundaries to reflect an administrative reorganisation).
 
 
 
@@ -12,8 +10,8 @@ changes that occured from one version of a Territorial Statistical Nomenclature 
 | owl:NamedIndividual| Instances of classes.      | Indiviual        |
 | owl:ObjectProperty | Relations between pairs of individuals.  | Relation        |
 | owl:DataProperty   | Relations between individuals and data values.   | Attribute        |
-| rdfs:domain  | A domain of a property limits the individuals to which the property can be applied. 특정 ObjectProperty 또는 DatatypeProperty의 주어가 될 수 있는 클래스를 한정  | Domain        |
-| rdfs:range   | The range of a property limits the individuals that the property may have as its value.   특정 ObjectProperty의 목적어가 될 수 있는 클래스를 한정 | Range        |
+| rdfs:domain  | A domain of a property limits the individuals to which the property can be applied. | Domain        |
+| rdfs:range   | The range of a property limits the individuals that the property may have as its value. | Range        |
 
 ## Ontology
 
@@ -26,7 +24,7 @@ changes that occured from one version of a Territorial Statistical Nomenclature 
  | dioc:Jurisdiction | Jurisdiction |Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.|ReligiousAdministrativeEntity|AdministrativeArea|
  | dioc:ReligiousAdministrativeEntity | ReligiousAdministrativeEntity |entity with control over a religion or part of a religion.|Arcieparchia, Abbey, Collegiata, Prepositura, Prelate, Plebania, Ecclesiastical_Province|Jurisdiction|
  | dioc:Ecclesiastical_Province|Ecclesiastical_Province |Geographical group of dioceses, ecclesiastical provinces or parishes|Diocesis|ReligiousAdministrativeEntity|
- | dioc:Diocese | Diocese |Christian district or see under the supervision of a bishop|Metropolitan, Suffragan|Ecclesiastical_Region|
+ | dioc:Diocese | Diocese |Christian district or see under the supervision of a bishop|Metropolitan, Suffragan, Archdiocese|Ecclesiastical_Region|
  | dioc:Archdiocese        | Archdiocese     |District or see under the supervision of a bishop, with more significance than a diocese| |Diocese|
  | dioc:Suffragan          | Suffragan       |One of the dioceses other than the metropolitan archdiocese that constitute an ecclesiastical province| |Diocese|
  | dioc:Collegiata          | Collegiata       |Church where the daily office of worship is maintained by a college of canons| |ReligiousAdministrativeEntity|
