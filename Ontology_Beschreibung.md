@@ -86,11 +86,11 @@ The ontology  aims at describing changes that occured from administrative territ
 | dioc:was_erected_by 	| was_erected_by     |dioc:ReligiousAdministrativeEntity| dioc:Appearance |
 | dioc:was_decay_by 	| was_decay_by     |dioc:ReligiousAdministrativeEntity| dioc:Inactive|
 | dioc:was_reinstated_by 	| was_reinstated_by     |dioc:ReligiousAdministrativeEntity| dioc:Reactive|
-| dioc:was_incorporated 	| was_incorporated     |dioc:ReligiousAdministrativeEntity| dioc:Expansion|
-| dioc:was_modificated 	| was_modificated     |dioc:ReligiousAdministrativeEntity| dioc:Reshaping|
-| dioc:was_united 	| was_united     |dioc:ReligiousAdministrativeEntity| dioc:Fusion|
-| dioc:was_lost 	| was_lost     |dioc:ReligiousAdministrativeEntity| dioc:Reduction|
-| dioc:has prefered identifier 	| has prefered identifier     |dioc:Place|dioc:Identifier|
+| dioc:was_incorporated 	| was_incorporated_by     |dioc:ReligiousAdministrativeEntity| dioc:Expansion|
+| dioc:was_modificated 	| was_modificated_by     |dioc:ReligiousAdministrativeEntity| dioc:Reshaping|
+| dioc:was_united 	| was_united_by     |dioc:ReligiousAdministrativeEntity| dioc:Fusion|
+| dioc:was_lost 	| was_lost_by     |dioc:ReligiousAdministrativeEntity| dioc:Reduction|
+| dioc:has_prefered_identifier 	| has_prefered_identifier     |dioc:Place|dioc:Identifier|
 | dioc:hasCoordinate 	| hasCoordinate     |dioc:Place|dioc:GeoCoordinates|
 
 
