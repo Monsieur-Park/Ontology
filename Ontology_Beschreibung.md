@@ -49,7 +49,7 @@ The ontology  aims at describing changes that occured from administrative territ
 
 
 
- - Class 2) TerritoryChange
+ - Class 2) Territorial change 
 
   ![change_Plot](./image/change3.jpg)
 
@@ -57,19 +57,19 @@ The ontology  aims at describing changes that occured from administrative territ
 
  | CLASS             | LABEL       |description | super class  | sub class|
  | ------------------| ----------- |----------- |-------------|--------- |
- | dioc:Change       | Change     |The Change concept is the super class of all types of change| FeatureChange|
- | dioc:FeatureChange       | FeatureChange     |The FeatureChange concept describes one or a set of changes that occur simultaneously and affect resource | HierarchyChange|Change|
- | dioc:HierarchyChange        | HierarchyChange      |The HierarchyChange concept describes modification of the position of administrative entity| UnitHierarchyChange |FeatureChange|
- | dioc:TerritoryChange        | TerritoryChange      |The TerritoryChange concept describes modification of the Territory of Feature | Expansion, Reshaping, Contraction, Reduction |FeatureChange|
- | dioc:StatusChange        | StatusChange      |The StatusChange concept describes change(s) that modify the territorial status|Appearance, Inactiv, Reactive|FeatureChange|
- | dioc:UnitHierarchyChange        | UnitHierarchyChange      |The UnitHierarchyChange concept describes changes that affect Features that are of type administrative entity . It describes changes of the Unit position within the hierarchy | |HierarchyChange|
- | dioc:Appearance        | Appearance      |The Appearance concept describes the appearance (or creation) of a new Feature | |StatusChange|
- | dioc:Inactive       | Inactive     |The Disappearance concept describes the disappearance (or end) of a Feature that comes as an input resource to the change event | |StatusChange|
- | dioc:Reactive       | Reactive     |diocese or metropolis that continues to exist but is not active or is in an occupied territory | |StatusChange|
- | dioc:Expansion       | Expansion     |Expansion of a territoryfeature, in terms of shape, means its size increase between the input territory and the output territory.  | |TerritoryChange|
- | dioc:Reshaping       | Reshaping     |Reshaping describes modification without size change between the input territory and the output territory.  | |TerritoryChange|
- | dioc:Contraction       | Contraction     |Contraction of a Feature, in terms of shape, means its size decrease between the input territory and the output territory. | |TerritoryChange|
- | dioc:Fusion       | Fusion     |The Fusion concept describes the merge of two or more territory Features into a single new territory Feature| |TerritoryChange|
+ | dioc:Change       | Change     |The Change concept is the super class of all types of change.| FeatureChange|
+ | dioc:FeatureChange       | FeatureChange     |The FeatureChange concept describes one or a set of changes that occur simultaneously and affect resource. | HierarchyChange|Change|
+ | dioc:HierarchyChange        | HierarchyChange      |The HierarchyChange concept describes modification of the position of administrative entity.| UnitHierarchyChange |FeatureChange|
+ | dioc:TerritoryChange        | TerritoryChange      |The TerritoryChange concept describes modification of the Territory of Feature. | Expansion, Reshaping, Contraction, Reduction |FeatureChange|
+ | dioc:StatusChange        | StatusChange      |The StatusChange concept describes change(s) that modify the territorial status.|Appearance, Inactiv, Reactive|FeatureChange|
+ | dioc:UnitHierarchyChange        | UnitHierarchyChange      |The UnitHierarchyChange concept describes changes that affect Features that are of type administrative entity . It describes changes of the Unit position within the hierarchy. | |HierarchyChange|
+ | dioc:Appearance        | Appearance      |The Appearance concept describes the **appearance** (or creation) of a new Feature. | |StatusChange|
+ | dioc:Inactive       | Inactive     |The Inactive concept describes the **disappearance** (or end) of a Feature that comes as an input resource to the change event. | |StatusChange|
+ | dioc:Reactive       | Reactive     |The Reactive describes the **re-establishment** of of a Feature that comes as an input resource to the change event.| |StatusChange|
+ | dioc:Expansion       | Expansion     |Expansion of a territoryfeature, in terms of shape, means its size **increase** between the input territory and the output territory.  | |TerritoryChange|
+ | dioc:Reshaping       | Reshaping     |Reshaping describes **modification** without size change between the input territory and the output territory.  | |TerritoryChange|
+ | dioc:Reduction       | Reduction     |Reduction of a Feature, in terms of shape, means its size **decrease** between the input territory and the output territory. | |TerritoryChange|
+ | dioc:Fusion       | Fusion     |The Fusion concept describes the **merge** of two or more territory Features into a single new territory Feature.| |TerritoryChange|
 
 
   ![change_Plot2](./image/change2.jpg)
