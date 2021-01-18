@@ -3,6 +3,10 @@
 The ontology  aims at describing changes that occured from administrative territories of catholic dioceses and their changes overtime (i.e., partition of the territory) and its subsequent (change in territorial units boundaries to reflect an administrative reorganisation).
 
 
+  ![ecc_Plot](./image/eccl_regions_ver3.jpg)
+
+
+
 
 | Web Ontology Language      | Bedeutung |Standard |
 | ------------------| ----------- |----------- |
@@ -15,7 +19,13 @@ The ontology  aims at describing changes that occured from administrative territ
 
 ## Ontology
 
- - Class 1) Religious administrative Unit
+ - Class 1) Religious administrative Unit 
+
+  ![diocesis_Plot](./image/Diocese_unit3.jpg)
+
+
+
+
 
  | CLASS             | LABEL       |description | super class  | sub class|
  | ------------------| ----------- |----------- |-------------|--------- |
@@ -41,6 +51,9 @@ The ontology  aims at describing changes that occured from administrative territ
 
  - Class 2) TerritoryChange
 
+  ![change_Plot](./image/change3.jpg)
+
+
 
  | CLASS             | LABEL       |description | super class  | sub class|
  | ------------------| ----------- |----------- |-------------|--------- |
@@ -57,6 +70,9 @@ The ontology  aims at describing changes that occured from administrative territ
  | dioc:Reshaping       | Reshaping     |Reshaping describes modification without size change between the input territory and the output territory.  | |TerritoryChange|
  | dioc:Contraction       | Contraction     |Contraction of a Feature, in terms of shape, means its size decrease between the input territory and the output territory. | |TerritoryChange|
  | dioc:Fusion       | Fusion     |The Fusion concept describes the merge of two or more territory Features into a single new territory Feature| |TerritoryChange|
+
+
+  ![change_Plot2](./image/change2.jpg)
 
 
 - Object property
@@ -92,3 +108,6 @@ The ontology  aims at describing changes that occured from administrative territ
 | dioc:has_date	       | has_date	     |dioc:Change| xsd:date|
 | dioc:before_name	       | before_name	     |dioc:Name| xsd:string|
 | dioc:after_name	       | after_name	     |dioc:Name| xsd:string|
+
+  ![property_Plot](./image/property.jpg)
+
