@@ -33,7 +33,7 @@ The ontology  aims at describing changes that occured from administrative territ
  | dioc:AdministrativeArea        | AdministrativeArea        |A geographical region, typically under the jurisdiction of a particular government.|jurisdiction|Place|
  | dioc:Jurisdiction | Jurisdiction |Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.|ReligiousAdministrativeEntity|AdministrativeArea|
  | dioc:ReligiousAdministrativeEntity | ReligiousAdministrativeEntity |entity with control over a religion or part of a religion.|Arcieparchia, Abbey, Collegiata, Prepositura, Prelate, Plebania, Ecclesiastical_Province|Jurisdiction|
- | dioc:Ecclesiastical_Province|Ecclesiastical_Province |Geographical group of dioceses, ecclesiastical provinces or parishes|Diocesis|ReligiousAdministrativeEntity|
+ | dioc:Ecclesiastical_Province|Ecclesiastical_Province |Geographical group of dioceses, ecclesiastical provinces or parishes|Diocese|ReligiousAdministrativeEntity|
  | dioc:Diocese | Diocese |Christian district or see under the supervision of a bishop|Metropolitan, Suffragan, Archdiocese|Ecclesiastical_Region|
  | dioc:Archdiocese        | Archdiocese     |District or see under the supervision of a bishop, with more significance than a diocese| |Diocese|
  | dioc:Suffragan          | Suffragan       |One of the dioceses other than the metropolitan archdiocese that constitute an ecclesiastical province| |Diocese|
