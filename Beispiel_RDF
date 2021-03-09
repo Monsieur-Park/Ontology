@@ -1,0 +1,228 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT *
+WHERE {
+  ?entity rdfs:label ?name .
+}
+LIMIT 20
+
+<rdf:Description resource="http://dioc.com/Abrincensis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdfs:label>Abrincensis</rdfs:label>
+    <rdf:type rdf:resource="dbo:Diocese">
+</rdf:Description>
+
+
+<rdf:Description resource="http://dioc.com/Abrincensis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>Abrincensis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasFoundedIn rdf:resources="http://dioc.com/Founding_of_Abrincensis">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.com/diocese_of_abrincensa">
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_Abrincensis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/OldAbrinco">
+<yohan:originalDioc rdf:resource="http://dioc.com/Censis">
+<yohan:date>1311</yohan:date>
+</rdf:Description>
+
+
+<rdf:Description resource="http://dioc.com/Abrincensis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>Abrincensis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_Abrincensis">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.com/diocese_of_abrincensa">
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_Abrincensis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/OldAbrinco">
+<yohan:originalDioc rdf:resource="http://dioc.com/Censis">
+<yohan:date>1311</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Abrincensis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>Abrincensis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_Abrincensis">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Extension_of_Abrincensis_in_1534">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_New_Ebranconsis">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.com/diocese_of_abrincensa">
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_Abrincensis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/OldAbrinco">
+<yohan:originalDioc rdf:resource="http://dioc.com/Censis">
+<yohan:date>1311</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Abrincensis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>Abrincensis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_Abrincensis">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Extension_of_Abrincensis_in_1534">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_New_Ebranconsis">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.com/diocese_of_abrincensa">
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_Abrincensis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/OldAbrinco">
+<yohan:originalDioc rdf:resource="http://dioc.com/Censis">
+<yohan:date>1311</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Extension_of_Abrincensis_in_1534">
+<rdf:type rdf:resource="yohan:Extension">
+...?
+<yohan:date>1534</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_New_Ebranconsis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/Abrincensis">
+<yohan:originalDioc rdf:resource="http://dioc.com/Ebrancona">
+<yohan:date>1600</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Abrincensis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>Abrincensis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_Abrincensis">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Extension_of_Abrincensis_in_1534">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_New_Ebranconsis">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.com/diocese_of_abrincensa">
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_Abrincensis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/OldAbrinco">
+<yohan:originalDioc rdf:resource="http://dioc.com/Censis">
+<yohan:date>1311</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Extension_of_Abrincensis_in_1534">
+<rdf:type rdf:resource="yohan:Extension">
+...?
+<yohan:date>1534</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_New_Ebranconsis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/Abrincensis">
+<yohan:originalDioc rdf:resource="http://dioc.com/Ebrancona">
+<yohan:date>1600</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/New_Ebranconsis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>New Ebranconsis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_New_Ebranconsis">
+</rdf:Description>
+
+...
+<rdf:Description resource="http://dioc.com/Abrincensis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>Abrincensis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_Abrincensis">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Extension_of_Abrincensis_in_1534">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_New_Ebranconsis">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.com/diocese_of_abrincensa">
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_Abrincensis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/OldAbrinco">
+<yohan:originalDioc rdf:resource="http://dioc.com/Censis">
+<yohan:date>1311</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Extension_of_Abrincensis_in_1534">
+<rdf:type rdf:resource="yohan:Extension">
+...?
+<yohan:date>1534</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_New_Ebranconsis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/Abrincensis">
+<yohan:originalDioc rdf:resource="http://dioc.com/Ebrancona">
+<yohan:date>1600</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/New_Ebranconsis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>New Ebranconsis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_New_Ebranconsis">
+</rdf:Description>
+
+...
+<rdf:Description resource="http://dioc.com/Abrincensis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>Abrincensis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_Abrincensis">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Extension_of_Abrincensis_in_1534">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_New_Ebranconsis">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.com/diocese_of_abrincensa">
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_Abrincensis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/OldAbrinco">
+<yohan:originalDioc rdf:resource="http://dioc.com/Censis">
+<yohan:date>1311</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Extension_of_Abrincensis_in_1534">
+<rdf:type rdf:resource="yohan:Extension">
+...?
+<yohan:date>1534</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/Founding_of_New_Ebranconsis">
+<rdf:type rdf:resource="yohan:Merging">
+<yohan:originalDioc rdf:resource="http://dioc.com/Abrincensis">
+<yohan:originalDioc rdf:resource="http://dioc.com/Ebrancona">
+<yohan:date>1600</yohan:date>
+</rdf:Description>
+
+<rdf:Description resource="http://dioc.com/New_Ebranconsis">
+    <rdf:type rdf:resource="yohan:Diocesis">
+    <rdf:type rdf:resource="dbo:Diocese">
+    <rdfs:label>New Ebranconsis</rdfs:label>
+    <yohan:hasSeatIn rdf:resource="http://dioc.com/Rome">
+    <yohan:isSubordinateTo rdf:resource="http://dioc.com/HolySee">
+    <yohan:wasAffectedBy rdf:resources="http://dioc.com/Founding_of_New_Ebranconsis">
+</rdf:Description>
+
+...
+
+...
