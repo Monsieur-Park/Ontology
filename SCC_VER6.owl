@@ -1,0 +1,3123 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/ontology/scc#"
+     xml:base="http://purl.org/ontology/scc"
+     xmlns:current="http://erlangen-crm.org/current/"
+     xmlns:REC-owl-semantics-20040210="http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <owl:Ontology rdf:about="http://purl.org/ontology/scc">
+        <owl:imports rdf:resource="http://www.w3.org/TR/owl-ref/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/scc#Name_of_administrative_unit -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/scc#Name_of_administrative_unit">
+        <rdfs:label xml:lang="en">Name of administrative unit</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#variantName"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#alternative_name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/scc#alternative_name">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#Name_of_administrative_unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#official_name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/scc#official_name">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#Name_of_administrative_unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#succeedingUnit -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/scc#succeedingUnit">
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#variantName -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/scc#variantName">
+        <rdfs:label xml:lang="en">Variant name</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/TR/2004/REC-owl-semantics-20040210/#owl_sameAs">
+        <rdfs:label xml:lang="en">owl:sameAs</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/page -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/page"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/140617/P117_occurs_during -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/140617/P117_occurs_during">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+        <rdfs:comment xml:lang="en">Scope note:              This property allows the entire E52 Time-Span of an E2 Temporal Entity to be situated within the Time-Span of another temporal entity that starts before and ends after the included temporal entity.  
+
+ 
+
+This property is only necessary if the time span is unknown (otherwise the relationship can be calculated). This property is the same as the &quot;during / includes&quot; relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).
+
+ 
+
+Examples:             
+
+Middle Saxon period (E4) occurs during Saxon period (E4)</rdfs:comment>
+        <rdfs:label xml:lang="en">P117 occurs during</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/P120_occurs_before -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/140617/P120_occurs_before">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+        <rdfs:comment xml:lang="en">Scope note:              This property identifies the relative chronological sequence of two temporal entities.
+
+ 
+
+It implies that a temporal gap exists between the end of A and the start of B. This property is only necessary if the relevant time spans are unknown (otherwise the relationship can be calculated).
+
+ 
+
+This property is the same as the &quot;before / after&quot; relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).
+
+Examples:             
+
+Early Bronze Age (E4) occurs before Late Bronze age (E4)</rdfs:comment>
+        <rdfs:label xml:lang="en">P120 occurs before</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/P120i_occurs_after -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/140617/P120i_occurs_after">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+        <rdfs:comment xml:lang="en">Scope note:              This property identifies the relative chronological sequence of two temporal entities.
+
+ 
+
+It implies that a temporal gap exists between the end of A and the start of B. This property is only necessary if the relevant time spans are unknown (otherwise the relationship can be calculated).
+
+ 
+
+This property is the same as the &quot;before / after&quot; relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).
+
+Examples:             
+
+ Late Bronze age (E4) occurs after Early Bronze Age (E4)</rdfs:comment>
+        <rdfs:label xml:lang="en">P120i occurs after</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/P46i_forms_part_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/140617/P46i_forms_part_of">
+        <rdfs:comment xml:lang="en">Scope note:              This property allows instances of E18 Physical Thing to be analysed into component elements.
+
+ 
+
+Component elements, since they are themselves instances of E18 Physical Thing, may be further analysed into sub-components, thereby creating a hierarchy of part decomposition. An instance of E18 Physical Thing may be shared between multiple wholes, for example two buildings may share a common wall.
+
+ 
+
+This property is intended to describe specific components that are individually documented, rather than general aspects. Overall descriptions of the structure of an instance of E18 Physical Thing are captured by the P3 has note property.
+
+ 
+
+The instances of E57 Materials of which an item of E18 Physical Thing is composed should be documented using P45 consists of (is incorporated in).
+
+Examples:              
+
+the Royal carriage (E22) forms part of the Royal train (E22)
+the “Hog’s Back” (E24) forms part of the “Fosseway” (E24)</rdfs:comment>
+        <rdfs:label>P46 forms part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/P4_has_time-span -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/140617/P4_has_time-span">
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/140617/P4i_is_time-span_of"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+        <rdfs:comment xml:lang="en">Scope note:              This property describes the temporal confinement of an instance of an E2 Temporal Entity.
+
+ 
+
+The related E52 Time-Span is understood as the real Time-Span during which the phenomena were active, which make up the temporal entity instance. It does not convey any other meaning than a positioning on the “time-line” of chronology. The Time-Span in turn is approximated by a set of dates (E61 Time Primitive). A temporal entity can have in reality only one Time-Span, but there may exist alternative opinions about it, which we would express by assigning multiple Time-Spans. Related temporal entities may share a Time-Span. Time-Spans may have completely unknown dates but other descriptions by which we can infer knowledge.
+
+Examples:              
+
+the Yalta Conference (E7) has time-span Yalta Conference time-span (E52)</rdfs:comment>
+        <rdfs:label xml:lang="en">P4 has time-span</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/P4i_is_time-span_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/140617/P4i_is_time-span_of">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:label xml:lang="en">Scope note:              This property describes the temporal confinement of an instance of an E2 Temporal Entity.
+
+ 
+
+The related E52 Time-Span is understood as the real Time-Span during which the phenomena were active, which make up the temporal entity instance. It does not convey any other meaning than a positioning on the “time-line” of chronology. The Time-Span in turn is approximated by a set of dates (E61 Time Primitive). A temporal entity can have in reality only one Time-Span, but there may exist alternative opinions about it, which we would express by assigning multiple Time-Spans. Related temporal entities may share a Time-Span. Time-Spans may have completely unknown dates but other descriptions by which we can infer knowledge.
+
+Examples:              
+
+the Yalta Conference (E7) has time-span Yalta Conference time-span (E52)</rdfs:label>
+        <rdfs:label xml:lang="en">p4i is time-span of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/P87_is_identified_by -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/140617/P87_is_identified_by">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/140617/E53_Place"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/140617/E44_Place_Appellation"/>
+        <rdfs:comment xml:lang="en">This property identifies an E53 Place using an E44 Place Appellation.
+Examples of Place Appellations used to identify Places include instances of E48 Place Name, addresses, E47 Spatial Coordinates etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">is identified by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Has_Administration_type -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#Has_Administration_type">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Administration_type"/>
+        <rdfs:label xml:lang="en">Has administration type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#becoming_resulting_unit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#becoming_resulting_unit">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#resulting_to"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#becoming"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#abbey"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archdiocese"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archpriesthood"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#prelature"/>
+        <rdfs:label xml:lang="en">becoming resulting unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#erection_resulting_unit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#erection_resulting_unit">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#resulting_to"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#foundation"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#abbey"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archdiocese"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archipresbyterate"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archpriesthood"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#collegiate"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#eparchy"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#parish"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#patriarchate"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#prelature"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#vicariate"/>
+        <rdfs:label xml:lang="en">erection resulting unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_acquisition_nullius_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_acquisition_nullius_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#acquisition_nullius"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#abbey"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archipresbyterate"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archpriesthood"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#collegiate"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#eparchy"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#prelature"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#vicariate"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archipresbyterate"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#collegiate"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#eparchy"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#parish"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#vicariate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has acquisition nullius participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_acquisition_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_acquisition_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#acquisition"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#acquisition_and_loss"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has acquisition participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_action_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_action_participant">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/140617/E5_Event"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+        <rdfs:comment xml:lang="en">This property represents an partecipation</rdfs:comment>
+        <rdfs:label xml:lang="en">has action participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_administration_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_administration_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#administration"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has administration participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_administration_perpetual_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_administration_perpetual_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#perpetual_administration"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has administration perpetual participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_arising_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_arising_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#arising"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has arising participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_becoming_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_becoming_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#becoming"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has becoming participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_confirmation_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_confirmation_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#confirmation"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">has confirmation participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_decay_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_decay_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#decay"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archipresbyterate"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has decay participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_geometry -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_geometry">
+        <rdfs:label>has geometry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_incorporation_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_incorporation_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#incorporation"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#incorporation_and_loss"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has incorporation participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_loss_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_loss_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#incorporation_and_loss"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#loss"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+        <rdfs:label xml:lang="en">has loss participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_modification_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_modification_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#modification"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has modification participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_reestablishment_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_reestablishment_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#reestablishment"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has reestablishment participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_reestablishment_titular_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_reestablishment_titular_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#reestablishment_as_a_titular_see"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has reestablishment titular participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_renomination_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_renomination_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#renomination"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has renomination participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_seat -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_seat">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#city"/>
+        <rdfs:label xml:lang="en">has seat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_separation_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_separation_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#separation"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">has separation participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_suppression_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_suppression_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#suppression"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#abbey"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archdiocese"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archipresbyterate"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#archpriesthood"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#collegiate"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#eparchy"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#patriarchate"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#prelature"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#vicariate"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archipresbyterate"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#collegiate"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#eparchy"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#parish"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#vicariate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has suppression participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_transfer_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_transfer_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#transfer"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has transfer participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_unione_aeque_principaliter_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_unione_aeque_principaliter_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#union_aeque_principaliter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>has unione aeque principaliter participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_unione_in_persona_episcopi_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_unione_in_persona_episcopi_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#union_In_persona_episcopi"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has unione in persona episcopi participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_unione_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_unione_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#union"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">has unione participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_unione_plena_participant -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#has_unione_plena_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#has_action_participant"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#union_plena"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>has unione plena participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#headof -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#headof">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#archdiocese"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#ecclesiastical_province"/>
+        <rdfs:label xml:lang="en">head of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_acquisition_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_acquisition_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#acquisition"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:comment xml:lang="en">This property relates an acquisition event to the entity involved in the acquisition.</rdfs:comment>
+        <rdfs:label xml:lang="en">is acquisition of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_administration_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_administration_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#administration"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">is administration of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_administration_perpetual_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_administration_perpetual_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#perpetual_administration"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">is administration perpetual of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_arising_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_arising_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#arising"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">is arising of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_composed_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_composed_of">
+        <owl:inverseOf rdf:resource="http://purl.org/ontology/scc#is_part_of"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+        <rdfs:label xml:lang="en">is composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_incorporation_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_incorporation_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#incorporation"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">is incorporation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_loss_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_loss_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#loss"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">is loss of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_modifying_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_modifying_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#modification"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">is modifying of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_part_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_part_of">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_separation_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_separation_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#separation"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">is separation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_situation_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_situation_of">
+        <rdfs:comment xml:lang="en">The property that links a situation to any object.</rdfs:comment>
+        <rdfs:label xml:lang="en">is situation of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_union_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_union_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#union"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is union of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_unione_aeque_principaliter_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_unione_aeque_principaliter_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#union_aeque_principaliter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is unione aeque principaliter of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_unione_in_persona_episcopi_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_unione_in_persona_episcopi_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#union_In_persona_episcopi"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <rdfs:label xml:lang="en">is unione in persona episcopi of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#is_unione_plena_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#is_unione_plena_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_situation_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#union_plena"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                    <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">is unione plena of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#precedingUnit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#precedingUnit">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+        <rdfs:label xml:lang="en">Preceding Unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#province -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#province">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#is_part_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#AdministrativeArea"/>
+        <rdfs:label xml:lang="en">province</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#renomination_name -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#renomination_name">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#resulting_to"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#renomination"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#changed_name"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">renomination name</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#resulting_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#resulting_to">
+        <rdfs:label xml:lang="en">resulting to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#succeedingUnit -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#succeedingUnit">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#AdministrativeArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#transfer_seat -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#transfer_seat">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#resulting_to"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#transfer"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#city"/>
+        <rdfs:label xml:lang="en">transfer seat</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#unit_level_change -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/scc#unit_level_change">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:label xml:lang="en">unit level change</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/hasReach -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/hasReach">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/140617/E72_Legal_Object"/>
+        <rdfs:comment xml:lang="en">indicates the geopolitical area covered by the jurisdiction</rdfs:comment>
+        <rdfs:label xml:lang="en">has reach</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/current/P82_at_some_time_within -->
+
+    <owl:DatatypeProperty rdf:about="http://erlangen-crm.org/current/P82_at_some_time_within">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">P82 at some time within</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#alternative_name -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#alternative_name">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#bibliographic_reference -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#bibliographic_reference">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#Bibliography"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">bibliographic reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#changed_name -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#changed_name">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#name"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#renomination"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">changed name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_date -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#has_date">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#Change"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">has date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#has_note_from_source -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#has_note_from_source">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/scc#source"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">has note from source</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#latitude">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/140617/E47_Spatial_Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#longitude">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/140617/E47_Spatial_Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#name -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#name">
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#official_name -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#official_name">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/scc#toponym -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/scc#toponym">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/ontology/scc#name"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">toponym</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://erlangen-crm.org/091216/E71.Man-Made_Thing -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/091216/E71.Man-Made_Thing">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E70_Thing"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises discrete, identifiable man-made items that are documented as single units.
+These items are either intellectual products or man-made physical things, and are characterized by relative stability. They may for instance have a solid physical form, an electronic encoding, or they may be logical concepts or structures.
+
+Examples:
+- Beethoven&apos;s 5th Symphony (E73)
+- Michelangelo&apos;s David
+- Einstein&apos;s Theory of General Relativity (E73)
+- the taxon &apos;Fringilla coelebs Linnaeus, 1758&apos; (E55)
+
+Definition</rdfs:comment>
+        <rdfs:label xml:lang="en">E71 Man-Made Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E28_Conceptual_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E28_Conceptual_Object">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/091216/E71.Man-Made_Thing"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises non-material products of our minds and other human produced data that have become objects of a discourse about their identity, circumstances of creation or historical implication. The production of such information may have been supported by the use of technical devices such as cameras or computers.
+Characteristically, instances of this class are created, invented or thought by someone, and then may be documented or communicated between persons. Instances of E28 Conceptual Object have the ability to exist on more than one particular carrier at the same time, such as paper, electronic signals, marks, audio media, paintings, photos, human memories, etc.
+They cannot be destroyed. They exist as long as they can be found on at least one carrier or in at least one human memory. Their existence ends when the last carrier and the last memory are lost.
+
+Examples:
+- Beethoven&apos;s &quot;Ode an die Freude&quot; (Ode to Joy) (E73)
+- the definition of &quot;ontology&quot; in the Oxford English Dictionary
+- the knowledge about the victory at Marathon carried by the famous runner</rdfs:comment>
+        <rdfs:label xml:lang="en">E28 Conceptual Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E31_Document -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E31_Document">
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises identifiable immaterial items that make propositions about reality.
+These propositions may be expressed in text, graphics, images, audiograms, videograms or by other similar means. Documentation databases are regarded as a special case of E31 Document. This class should not be confused with the term &quot;document&quot; in Information Technology, which is compatible with E73 Information Object.
+
+Examples:
+- the Encyclopaedia Britannica (E32)
+- the photo of the Allied Leaders at Yalta published by the UPI, 1945
+- the Doomsday Book
+
+Definition</rdfs:comment>
+        <rdfs:label xml:lang="en">E31 Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E39_Actor -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E39_Actor">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E77_Persistent_Item"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises people, either individually or in groups, who have the potential to perform intentional actions for which they can be held responsible.
+The CRM does not attempt to model the inadvertent actions of such actors. Individual people should be documented as instances of E21 Person, whereas groups should be documented as instances of either E74 Group or its subclass E40 Legal Body.
+
+Examples:
+- London and Continental Railways (E40)
+- the Governor of the Bank of England in 1975 (E21)
+- Sir Ian McKellan (E21)</rdfs:comment>
+        <rdfs:label xml:lang="en">Actor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E40_Legal_Body -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E40_Legal_Body">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E74_Group"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises institutions or groups of people that have obtained a legal recognition as a group and can act collectively as agents.
+This means that they can perform actions, own property, create or destroy things and can be held collectively responsible for their actions like individual people. The term &apos;personne morale&apos; is often used for this in French.
+
+Examples:
+- Greenpeace
+- Paveprime Ltd
+- the National Museum of Denmark</rdfs:comment>
+        <rdfs:label xml:lang="en">Legal Body</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E41_Appellation -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E41_Appellation">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E90_Symbolic_Object"/>
+        <rdfs:comment xml:lang="en">This class comprises signs, either meaningful or not, or arrangements of signs following a specific syntax, that are used or can be used to refer to and identify a specific instance of some class or category within a certain context.
+Instances of E41 Appellation do not identify things by their meaning, even if they happen to have one, but instead by convention, tradition, or agreement. Instances of E41 Appellation are cultural constructs; as such, they have a context, a history, and a use in time and space by some group of users. A given instance of E41 Appellation can have alternative forms, i.e., other instances of E41 Appellation that are always regarded as equivalent independent from the thing it denotes.
+Specific subclasses of E41 Appellation should be used when instances of E41 Appellation of a characteristic form are used for particular objects. Instances of E49 Time Appellation, for example, which take the form of instances of E50 Date, can be easily recognised.
+E41 Appellation should not be confused with the act of naming something. Cf. E15 Identifier Assignment</rdfs:comment>
+        <rdfs:label xml:lang="en">Appellation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E42_Identifier -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E42_Identifier">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E41_Appellation"/>
+        <rdfs:comment xml:lang="en">This class comprises strings or codes assigned to instances of E1 CRM Entity in order to identify them uniquely and permanently
+            within the context of one or more organisations. Such codes are often known as inventory numbers, registration codes, etc. and are
+            typically composed of alphanumeric sequences. The class E42 Identifier is not normally used for machine-generated identifiers used for
+            automated processing unless these are also used by human agents.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E44_Place_Appellation -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E44_Place_Appellation">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E41_Appellation"/>
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/140617/E49_Time_Appellation"/>
+        <rdfs:comment xml:lang="en">This class comprises any sort of identifier characteristically used to refer to an E53 Place.
+Instances of E44 Place Appellation may vary in their degree of precision and their meaning may vary over time - the same instance of E44 Place Appellation may be used to refer to several places, either because of cultural shifts, or because objects used as reference points have moved around. Instances of E44 Place Appellation can be extremely varied in form: postal addresses, instances of E47 Spatial Coordinate, and parts of buildings can all be considered as instances of E44 Place Appellation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Place Appellation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E47_Spatial_Coordinates -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E47_Spatial_Coordinates">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E44_Place_Appellation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#latitude"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#longitude"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This class comprises the textual or numeric information required to locate specific instances of E53 Place within schemes of spatial identification.
+Coordinates are a specific form of E44 Place Appellation, that is, a means of referring to a particular E53 Place. Coordinates are not restricted to longitude, latitude and altitude. Any regular system of reference that maps onto an E19 Physical Object can be used to generate coordinates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Spatial Coordinates</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E48_Place_Name -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E48_Place_Name">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E44_Place_Appellation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#toponym"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">This class comprises particular and common forms of E44 Place Appellation.
+Place Names may change their application over time: the name of an E53 Place may change, and a name may be reused for a different E53 Place. Instances of E48 Place Name are typically subject to place name gazetteers.</rdfs:comment>
+        <rdfs:label xml:lang="en">Place Name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E49_Time_Appellation -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E49_Time_Appellation">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E41_Appellation"/>
+        <rdfs:comment xml:lang="en">This class comprises all forms of names or codes, such as historical periods, and dates, which are characteristically used to refer to a specific E52 Time-Span.
+The instances of E49 Time Appellation may vary in their degree of precision, and they may be relative to other time frames, “Before Christ” for example. Instances of E52 Time-Span are often defined by reference to a cultural period or an event e.g. ‘the duration of the Ming Dynasty’.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time Appellation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E53_Place -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E53_Place">
+        <owl:disjointWith rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+        <rdfs:comment xml:lang="en">Scope note:              This class comprises extents in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter.
+
+ 
+
+The instances of E53 Place are usually determined by reference to the position of “immobile” objects such as buildings, cities, mountains, rivers, or dedicated geodetic marks. A Place can be determined by combining a frame of reference and a location with respect to this frame. It may be identified by one or more instances of E44 Place Appellation.
+
+ 
+
+It is sometimes argued that instances of E53 Place are best identified by global coordinates or absolute reference systems. However, relative references are often more relevant in the context of cultural documentation and tend to be more precise. In particular, we are often interested in position in relation to large, mobile objects, such as ships. For example, the Place at which Nelson died is known with reference to a large mobile object – H.M.S Victory. A resolution of this Place in terms of absolute coordinates would require knowledge of the movements of the vessel and the precise time of death, either of which may be revised, and the result would lack historical and cultural relevance.
+
+ 
+
+Any object can serve as a frame of reference for E53 Place determination. The model foresees the notion of a &quot;section&quot; of an E19 Physical Object as a valid E53 Place determination.
+
+Examples:              
+
+      the extent of the UK in the year 2003
+      the position of the hallmark on the inside of my wedding ring
+      the place referred to in the phrase: “Fish collected at three miles north of the confluence of the Arve and the Rhone”
+      here -&gt; &lt;-</rdfs:comment>
+        <rdfs:label xml:lang="en">E53 Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E55_Type -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E55_Type">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E28_Conceptual_Object"/>
+        <rdfs:comment>This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify instances of CRM classes. Instances of E55 Type represent concepts in contrast to instances of E41 Appellation which are used to name instances of CRM classes.
+E55 Type is the CRM&apos;s interface to domain specific ontologies and thesauri. These can be represented in the CRM as subclasses of E55 Type, forming hierarchies of terms, i.e. instances of E55 Type linked via P127 has broader term (has narrower term). Such hierarchies may be extended with additional properties.
+
+Examples:
+- weight, length, depth [types of E54 Dimension]
+- portrait, sketch, animation [types of E38 image]
+- French, English, German [E56]
+- excellent, good, poor [types of E3 Condition State]
+- Ford Model T, chop stick [types of E22 Man-Made Object]
+- cave, doline, scratch [types of E26 Physical Feature]
+- poem, short story [types of E33 Linguistic Object]
+- wedding, earthquake, skirmish [types of E5 Event]</rdfs:comment>
+        <rdfs:label xml:lang="en">E55 Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E5_Event -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E5_Event">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+        <rdfs:comment xml:lang="en">This class comprises changes of states in cultural, social or physical systems, regardless of scale, brought about by a series or group of coherent physical, cultural, technological or legal phenomena. Such changes of state will affect instances of E77 Persistent Item or its subclasses.
+
+ 
+
+The distinction between an E5 Event and an E4 Period is partly a question of the scale of observation. Viewed at a coarse level of detail, an E5 Event is an ‘instantaneous’ change of state. At a fine level, the E5 Event can be analysed into its component phenomena within a space and time frame, and as such can be seen as an E4 Period. The reverse is not necessarily the case: not all instances of E4 Period give rise to a noteworthy change of state.</rdfs:comment>
+        <rdfs:label xml:lang="en">E5 Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E70_Thing -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E70_Thing">
+        <rdfs:label xml:lang="en">E70 Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E72_Legal_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E72_Legal_Object">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E70_Thing"/>
+        <rdfs:comment xml:lang="en">Scope note:              This class comprises those material or immaterial items to which instances of E30 Right, such as the right of ownership or use, can be applied.
+
+ 
+
+This is true for all E18 Physical Thing. In the case of instances of E28 Conceptual Object, however, the identity of the E28 Conceptual Object or the method of its use may be too ambiguous to reliably establish instances of E30 Right, as in the case of taxa and inspirations. Ownership of corporations is currently regarded as out of scope of the CRM.
+
+Examples:              
+
+the Cullinan diamond (E19)
+definition of the CIDOC Conceptual Reference Model Version 2.1 (E73)</rdfs:comment>
+        <rdfs:label xml:lang="en">E72 Legal Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E74_Group -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E74_Group">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E39_Actor"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises any gatherings or organizations of two or more people that act collectively or in a similar way due to any form of unifying relationship. In the wider sense this class also comprises official positions which used to be regarded in certain contexts as one actor, independent of the current holder of the office, such as the president of a country. A joint pseudonym (i.e., a name that seems indicative of an individual but that is actually used as a persona by two or more people) is a particular case of E74 Group.
+A gathering of people becomes an E74 Group when it exhibits organizational characteristics usually typified by a set of ideas or beliefs held in common, or actions performed together. These might be communication, creating some common artifact, a common purpose such as study, worship, business, sports, etc. Nationality can be modelled as membership in an E74 Group (cf. HumanML markup). Married couples and other concepts of family are regarded as particular examples of E74 Group.
+
+Examples:
+- the impressionists
+- the Navajo
+- the Greeks
+- the peace protestors in n New York City on February 15 2003
+- Exxon-Mobil
+- King Solomon and his wives
+- the President of the Swiss Confederation
+- Nicolas Bourbaki
+- Betty Crocker</rdfs:comment>
+        <rdfs:label xml:lang="en">Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E77_Persistent_Item -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E77_Persistent_Item">
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises items that have a persistent identity, sometimes known as &quot;endurants&quot; in philosophy.
+They can be repeatedly recognized within the duration of their existence by identity criteria rather than by continuity or observation. Persistent Items can be either physical entities, such as people, animals or things, or conceptual entities such as ideas, concepts, products of the imagination or common names.
+The criteria that determine the identity of an item are often difficult to establish -; the decision depends largely on the judgement of the observer. For example, a building is regarded as no longer existing if it is dismantled and the materials reused in a different configuration. On the other hand, human beings go through radical and profound changes during their life-span, affecting both material composition and form, yet preserve their identity by other criteria. Similarly, inanimate objects may be subject to exchange of parts and matter. The class E77 Persistent Item does not take any position about the nature of the applicable identity criteria and if actual knowledge about identity of an instance of this class exists. There may be cases, where the identity of an E77 Persistent Item is not decidable by a certain state of knowledge.
+The main classes of objects that fall outside the scope the E77 Persistent Item class are temporal objects such as periods, events and acts, and descriptive properties.
+
+Examples:
+- Leonardo da Vinci
+- Stonehenge
+- the hole in the ozone layer
+- the First Law of Thermodynamics
+- the Bermuda Triangle</rdfs:comment>
+        <rdfs:label xml:lang="en">Persistent Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E7_Activity -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E7_Activity">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E5_Event"/>
+        <rdfs:label xml:lang="en">E7 Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/140617/E90_Symbolic_Object -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/140617/E90_Symbolic_Object">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E28_Conceptual_Object"/>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E72_Legal_Object"/>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises identifiable symbols and any aggregation of symbols, such as characters, identifiers, traffic signs, emblems, texts, data sets, images, musical scores, multimedia objects, computer program code or mathematical formulae that have an objectively recognizable structure and that are documented as single units. It includes sets of signs of any nature, which may serve to designate something, or to communicate some propositional content.
+An instance of E90 Symbolic Object does not depend on a specific physical carrier, which can include human memory, and it can exist on one or more carriers simultaneously. An instance of E90 Symbolic Object may or may not have a specific meaning, for example an arbitrary character string.
+In some cases, the content of an instance of E90 Symbolic Object may completely be represented by a serialized digital content model, such as a sequence of ASCII-encoded characters, an XML or HTML document, or a TIFF image. The property P3 has note allows for the description of this content model. In order to disambiguate which symbolic level is the carrier of the meaning, the property P3.1 has type can be used to specify the encoding (e.g. &quot;bit&quot;, &quot;Latin character&quot;, RGB pixel).
+
+Examples:
+- ecognizabl’
+- The “no-smoking” sign (E36)
+- “BM000038850.JPG” (E75)
+- image BM000038850.JPG from the Clayton Herbarium in London (E38)
+- The distribution of form, tone and colour found on Leonardo da Vinci’s painting named “Mona Lisa” in daylight (E38)
+- The Italian text of Dante’s “Divina Commedia” as found in the authoritative critical edition La Commedia secondo l’antica vulgata a cura di Giorgio Petrocchi, Milano: Mondadori, 1966-67 (= Le Opere di Dante Alighieri, Edizione Nazionale a cura della Società Dantesca Italiana, VII, 1-4) (E33)
+
+Definition</rdfs:comment>
+        <rdfs:label xml:lang="en">E90 Symbolic Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E2_Temporal_Entity -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E2_Temporal_Entity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/140617/P4_has_time-span"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises all phenomena, such as the instances of E4 Periods and E5 Events, which happen over a limited extent in time. This extent in time must be contiguous, i.e., without gaps. In case the defining kinds of phenomena for an instance of E2 Temporal Entity cease to happen, and occur later again at another time, we regard that the former instance of E2 Temporal Entity has ended and a new instance has come into existence. In more intuitive terms, the same event cannot happen twice.
+
+In some contexts, such phenomena are also called perdurants. This class is disjoint from E77 Persistent Item and is an abstract class that typically has no direct instances. E2 Temporal Entity is specialized into E4 Period, which applies to a particular geographic area (defined with a greater or lesser degree of precision), and E3 Condition State, which applies to instances of E18 Physical Thing.
+
+
+Examples:
+- Bronze Age (E4) (Childe, 1963)
+- the earthquake in Lisbon 1755 (E5) (Chester, 2001)
+- the Peterhof Palace near Saint Petersburg being in ruins from 1944 – 1946 (E3) (Maddox, 2015)
+
+
+In First Order Logic:
+E2(x) ⊃ E1(x)</rdfs:comment>
+        <rdfs:label xml:lang="en">E2 Temporal Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E3_Condition_State -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E3_Condition_State">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:label xml:lang="en">E3 Condition State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E4_Period -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E4_Period">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/140617/P120_occurs_before"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/140617/P120i_occurs_after"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises sets of coherent phenomena or cultural manifestations bounded in time and space.
+It is the social or physical coherence of these phenomena that identify an E4 Period and not the associated spatio-temporal bounds. These bounds are a mere approximation of the actual process of growth, spread and retreat. Consequently, different periods can overlap and coexist in time and space, such as when a nomadic culture exists in the same area as a sedentary culture.
+Typically this class is used to describe prehistoric or historic periods such as the &quot;Neolithic Period&quot;, the &quot;Ming Dynasty&quot; or the &quot;McCarthy Era&quot;. There are however no assumptions about the scale of the associated phenomena. In particular all events are seen as synthetic processes consisting of coherent phenomena. Therefore E4 Period is a superclass of E5 Event. For example, a modern clinical E67 Birth can be seen as both an atomic E5 Event and as an E4 Period that consists of multiple activities performed by multiple instances of E39 Actor.
+There are two different conceptualisations of &apos;artistic style&apos;, defined either by physical features or by historical context. For example, &quot;Impressionism&quot; can be viewed as a period lasting from approximately 1870 to 1905 during which paintings with particular characteristics were produced by a group of artists that included (among others) Monet, Renoir, Pissarro, Sisley and Degas. Alternatively, it can be regarded as a style applicable to all paintings sharing the characteristics of the works produced by the Impressionist painters, regardless of historical context. The first interpretation is an E4 Period, and the second defines morphological object types that fall under E55 Type.
+Another specific case of an E4 Period is the set of activities and phenomena associated with a settlement, such as the populated period of Nineveh.
+
+Examples:
+- Jurassic
+- European Bronze Age
+- Italian Renaissance
+- Thirty Years War
+- Sturm und Drang
+- Cubism</rdfs:comment>
+        <rdfs:label xml:lang="en">E4 Period</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://erlangen-crm.org/current/E52_Time-Span -->
+
+    <owl:Class rdf:about="http://erlangen-crm.org/current/E52_Time-Span">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/140617/P4i_is_time-span_of"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Scope note:
+This class comprises abstract temporal extents, in the sense of Galilean physics, having a beginning, an end and a duration.
+Time Span has no other semantic connotations. Time-Spans are used to define the temporal extent of instances of E4 Period, E5 Event and any other phenomena valid for a certain time. An E52 Time-Span may be identified by one or more instances of E49 Time Appellation.
+Since our knowledge of history is imperfect, instances of E52 Time-Span can best be considered as approximations of the actual Time-Spans of temporal entities. The properties of E52 Time-Span are intended to allow these approximations to be expressed precisely. An extreme case of approximation, might, for example, define an E52 Time-Span having unknown beginning, end and duration. Used as a common E52 Time-Span for two events, it would nevertheless define them as being simultaneous, even if nothing else was known.
+Automatic processing and querying of instances of E52 Time-Span is facilitated if data can be parsed into an E61 Time Primitive.</rdfs:comment>
+        <rdfs:label xml:lang="en">E52 Time-Span</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Administration_type -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Administration_type">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E55_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#bibliographic_reference"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_note_from_source"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Administration type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#AdministrativeArea -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#AdministrativeArea">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#populated_place"/>
+        <rdfs:label xml:lang="en">Administrative Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Apostolic_see -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Apostolic_see">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:comment xml:lang="en">Episcopal jurisdiction of the Catholic Church in Rome, Italy</rdfs:comment>
+        <rdfs:label xml:lang="en">Apostolic see</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q1147274</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Bibliography -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Bibliography">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E31_Document"/>
+        <rdfs:label xml:lang="en">Bibliography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Change -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Change">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E7_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#bibliographic_reference"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_note_from_source"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Change concept is the super class of all types of change.</rdfs:comment>
+        <rdfs:label xml:lang="en">Change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Conclave -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Conclave">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E5_Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://erlangen-crm.org/140617/P117_occurs_during"/>
+                <owl:someValuesFrom rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Conclave</rdfs:label>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q186431</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Diocese -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Diocese">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#becoming_resulting_unit"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ontology/scc#becoming"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_seat"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/ontology/scc#city"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_part_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/ontology/scc#ecclesiastical_province"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#alternative_name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#official_name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#changed_name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Christian district or see under the supervision of a bishop</rdfs:comment>
+        <rdfs:label xml:lang="en">diocese</rdfs:label>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q665487</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Geographical_Place_Type -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Geographical_Place_Type">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E55_Type"/>
+        <rdfs:label xml:lang="en">Geographical Place Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Reign -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Reign">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+        <rdfs:label xml:lang="en">Reign</rdfs:label>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q7310094</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Religious_Administrative_Area -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Religious_Administrative_Area">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#AdministrativeArea"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#Geographical_Place_Type"/>
+        <rdfs:comment xml:lang="en">This class represents the clerical administrative area. It can be used to represents Diocese, Parish, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Religious Administrative Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Secular_Administrative_Area -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Secular_Administrative_Area">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#AdministrativeArea"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#Geographical_Place_Type"/>
+        <rdfs:label xml:lang="en">Secular Administrative Area</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Sede_vacante -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#Sede_vacante">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+        <rdfs:label xml:lang="en">sede vacante</rdfs:label>
+        <rdfs:seeAlso>https://dbpedia.org/page/Sede_vacante</rdfs:seeAlso>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q48017</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#abbey -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#abbey">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:comment xml:lang="en">Monastery or convent, under the authority of an abbot or an abbess</rdfs:comment>
+        <rdfs:label xml:lang="en">abbey</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q160742</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#acquisition -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#acquisition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#territorial_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_acquisition_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_acquisition_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">acquisition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#acquisition_and_loss -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#acquisition_and_loss">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#territorial_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_acquisition_participant"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_loss_participant"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_acquisition_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_loss_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">acquisition and loss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#acquisition_nullius -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#acquisition_nullius">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#territorial_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_acquisition_nullius_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archipresbyterate"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#collegiate"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#eparchy"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#parish"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#vicariate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">acquisition nullius</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#administration -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#administration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_administration_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_administration_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">administration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#administrative_unit -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#administrative_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#organization"/>
+        <rdfs:comment xml:lang="en">Unis for administration purposes, with or without its own local government</rdfs:comment>
+        <rdfs:label xml:lang="en">administrative unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#archdiocese -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#archdiocese">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:comment xml:lang="en">District or see under the supervision of a bishop, with more significance than a diocese</rdfs:comment>
+        <rdfs:label xml:lang="en">archdiocese</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q2072238</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#archipresbyterate -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#archipresbyterate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:comment xml:lang="en">A diocese of the Eastern Christian Church</rdfs:comment>
+        <rdfs:label xml:lang="en">archeparchy</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q2288631</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#archpriesthood -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#archpriesthood">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:comment xml:lang="en">territory that includes several parishes governed by an archpriest</rdfs:comment>
+        <rdfs:label xml:lang="en">archipresbyterate</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q47999270</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#arising -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#arising">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#status_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_arising_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_arising_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">arising</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#becoming -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#becoming">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#becoming_resulting_unit"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_becoming_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">becoming</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#city -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#city">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#Secular_Administrative_Area"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#transfer_seat"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ontology/scc#transfer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">city</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q515</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#collegiate -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#collegiate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:comment xml:lang="en">Church where the daily office of worship is maintained by a college of canons</rdfs:comment>
+        <rdfs:label xml:lang="en">collegiate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#confirmation -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#confirmation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#status_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_confirmation_participant"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">confirmation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#decay -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#decay">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#status_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_decay_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archipresbyterate"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">decay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#ecclesiastical_province -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#ecclesiastical_province">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#Religious_Administrative_Area"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_composed_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">ecclesiastical province</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q625160</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#eparchy -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#eparchy">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:comment xml:lang="en">administrative territorial entity of Greek-Catholic, Orthodox and Eastern Churches</rdfs:comment>
+        <rdfs:label xml:lang="en">eparchy</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q285181</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#foundation -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#foundation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#status_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#erection_resulting_unit"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archipresbyterate"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#collegiate"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#eparchy"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#parish"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#vicariate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">foundation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#governing_change -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#governing_change">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#Change"/>
+        <rdfs:label xml:lang="en">governing change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#incorporation -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#incorporation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#territorial_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_incorporation_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_incorporation_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">incorporation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#incorporation_and_loss -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#incorporation_and_loss">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#territorial_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_incorporation_participant"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_loss_participant"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_incorporation_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_loss_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">incorporation and loss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#loss -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#loss">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#territorial_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_loss_participant"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#metropolis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_loss_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">loss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#metropolis -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#metropolis">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#headof"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/ontology/scc#ecclesiastical_province"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">diocese headed by an archbishop and having suffragan dioceses under its jurisdiction</rdfs:comment>
+        <rdfs:label xml:lang="en">metropolis</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q427961</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#modification -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#modification">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_modification_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_modifying_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">modification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#organization -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#organization">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/091216/E71.Man-Made_Thing"/>
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E40_Legal_Body"/>
+        <rdfs:label xml:lang="en">organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#parish -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#parish">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:label xml:lang="en">parish (plebania)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#patriarchate -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#patriarchate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:comment xml:lang="en">office or jurisdiction of a patriarch</rdfs:comment>
+        <rdfs:label xml:lang="en">patriarchate</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q1282276</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#perpetual_administration -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#perpetual_administration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_administration_perpetual_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_administration_perpetual_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">perpetual administration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#populated_place -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#populated_place">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E53_Place"/>
+        <rdfs:label xml:lang="en">populated place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#prelature -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#prelature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:label xml:lang="en">prelature</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q2633744</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#reestablishment -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#reestablishment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#status_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_reestablishment_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">reestablishment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#reestablishment_as_a_titular_see -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#reestablishment_as_a_titular_see">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#status_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_reestablishment_titular_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">reestablishment as a titular see</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#religious_administrative_unit -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#religious_administrative_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#Has_Administration_type"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/ontology/scc#Administration_type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#alternative_name"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#official_name"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">entity with control over a religion or part of a religion.</rdfs:comment>
+        <rdfs:label xml:lang="en">religious administrative unit</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q51041800</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#renomination -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#renomination">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_renomination_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#changed_name"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">renomination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#secular_administrative_unit -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#secular_administrative_unit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#administrative_unit"/>
+        <rdfs:label xml:lang="en">secular administrative unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#separation -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#separation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_separation_participant"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_separation_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">separation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#source -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#source">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/140617/E31_Document"/>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#status_change -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#status_change">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#Change"/>
+        <rdfs:comment xml:lang="en">The StatusChange concept describes change(s) that modify the territorial status.</rdfs:comment>
+        <rdfs:label xml:lang="en">status change</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#suppression -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#suppression">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#status_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_suppression_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archipresbyterate"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#collegiate"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#eparchy"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#parish"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#vicariate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">suppression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#territorial_change -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#territorial_change">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#Change"/>
+        <rdfs:label xml:lang="en">territorial change</rdfs:label>
+        <owl:incompatibleWith xml:lang="en">The TerritoryChange concept describes modification of the Territory of Feature.</owl:incompatibleWith>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#transfer -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#transfer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_transfer_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#transfer_seat"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#city"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">(seat) transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#union -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#union">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_unione_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_union_of"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_date"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#union_In_persona_episcopi -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#union_In_persona_episcopi">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_unione_in_persona_episcopi_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_unione_in_persona_episcopi_of"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">union In persona episcopi</rdfs:label>
+        <rdfs:seeAlso>https://www.wikidata.org/wiki/Q1409110</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#union_aeque_principaliter -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#union_aeque_principaliter">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_unione_aeque_principaliter_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_unione_in_persona_episcopi_of"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">union aeque principaliter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#union_plena -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#union_plena">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#governing_change"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#has_unione_plena_participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/ontology/scc#is_unione_plena_of"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+                            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">union plena</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/scc#vicariate -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/scc#vicariate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/scc#religious_administrative_unit"/>
+        <rdfs:label xml:lang="en">vicariate</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q12778511</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/scc#Aberdeen -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#Aberdeen">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#city"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aberdeen</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.wikidata.org/wiki/Q36405</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Aberdonensis -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#Aberdonensis">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <is_part_of rdf:resource="http://purl.org/ontology/scc#Sancti_Andreae"/>
+        <alternative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortlach</alternative_name>
+        <rdfs:seeAlso xml:lang="en">https://www.catholic-hierarchy.org/diocese/daber.html</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">https://www.wikidata.org/wiki/Q866761</rdfs:seeAlso>
+        <skos:prefLabel xml:lang="lat">Aberdonensis</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Merciorum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#Merciorum">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <Has_Administration_type rdf:resource="http://purl.org/ontology/scc#immediate_subiecte"/>
+        <changed_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aberdonensis</changed_name>
+        <succeedingUnit rdf:resource="http://purl.org/ontology/scc#Aberdonensis"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Merciorum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Romana -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#Romana">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#Diocese"/>
+        <alternative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Urbis</alternative_name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romana</rdfs:label>
+        <REC-owl-semantics-20040210:owl_sameAs>https://www.wikidata.org/wiki/Q665037</REC-owl-semantics-20040210:owl_sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#Sancti_Andreae -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#Sancti_Andreae">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#ecclesiastical_province"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sancti Andreae</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#decaying_of_Aberdonensis -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#decaying_of_Aberdonensis">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#decay"/>
+        <has_decay_participant rdf:resource="http://purl.org/ontology/scc#Aberdonensis"/>
+        <has_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1577</has_date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decaying of Aberdonensis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#fondation_of_Merciorum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#fondation_of_Merciorum">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#foundation"/>
+        <erection_resulting_unit rdf:resource="http://purl.org/ontology/scc#Merciorum"/>
+        <current:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11th century</current:P82_at_some_time_within>
+        <bibliographic_reference rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">REA (I), p. XI</bibliographic_reference>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fondation of Merciorum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#fondation_of_Romana -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#fondation_of_Romana">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#foundation"/>
+        <erection_resulting_unit rdf:resource="http://purl.org/ontology/scc#Romana"/>
+        <current:P82_at_some_time_within rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I sec.</current:P82_at_some_time_within>
+        <rdfs:label>fondation of Romana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#immediate_subiecte -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#immediate_subiecte">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#Administration_type"/>
+        <rdfs:label>immediate subiecte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#reestablishment_of_Aberdonensis -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#reestablishment_of_Aberdonensis">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#reestablishment"/>
+        <has_reestablishment_participant rdf:resource="http://purl.org/ontology/scc#Aberdonensis"/>
+        <bibliographic_reference rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">ASS (XI), p. 6</bibliographic_reference>
+        <has_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">04.03.1878</has_date>
+        <has_note_from_source rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Ex supremo Apostolatus (Leone XIII)</has_note_from_source>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reestablishment of Aberdonensis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#renomination_of_Merciorum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#renomination_of_Merciorum">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#renomination"/>
+        <has_renomination_participant rdf:resource="http://purl.org/ontology/scc#Merciorum"/>
+        <bibliographic_reference rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">REA (I), p. XVIII</bibliographic_reference>
+        <changed_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aberdonensis</changed_name>
+        <has_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1125</has_date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renomination of Merciorum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#suffragan -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#suffragan">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#Administration_type"/>
+        <rdfs:label>suffragan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/scc#transfer_of_Merciorum -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/scc#transfer_of_Merciorum">
+        <rdf:type rdf:resource="http://purl.org/ontology/scc#transfer"/>
+        <has_transfer_participant rdf:resource="http://purl.org/ontology/scc#Merciorum"/>
+        <transfer_seat rdf:resource="http://purl.org/ontology/scc#Aberdeen"/>
+        <bibliographic_reference rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">REA (I), p. XVIII</bibliographic_reference>
+        <has_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1125</has_date>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transfer of Merciorum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/ontology/scc#alternative_name">
+        <rdfs:label xml:lang="en">alternative name</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ontology/scc#official_name">
+        <rdfs:label xml:lang="en">official name</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/ontology/scc#succeedingUnit">
+        <rdfs:label xml:lang="en">Succeeding Unit</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#Apostolic_see"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#Diocese"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#abbey"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#archdiocese"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#archipresbyterate"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#archpriesthood"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#collegiate"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#eparchy"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#metropolis"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#parish"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#patriarchate"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#prelature"/>
+            <rdf:Description rdf:about="http://purl.org/ontology/scc#vicariate"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
